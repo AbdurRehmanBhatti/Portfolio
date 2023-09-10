@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">  <!-- Insure that IE uses the latest available rendering engine to render the page -->
-        <meta name="viewport" content="width-device-width, initial-scale-1.0"> <!-- Sets the webpage width to the width of the device of the screen and 1.0 sets the initial point of the zoom the page is loaded -->
-        <link rel="style" href="style.css">
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <header>
-            <a href="#" class="logo">Portfolio</a>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- Insure that IE uses the latest available rendering engine to render the page -->
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <!-- Sets the webpage width to the width of the device of the screen and 1.0 sets the initial point of the zoom the page is loaded -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#" class="active" style="--i:1">Home</a>
+            <a href="#" style="--i:2">About</a>
+            <a href="#" style="--i:3">Skills</a>
+            <a href="#" style="--i:4">Portfolio</a>
+            <a href="#" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Abdur Rehman</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p> I'm a web Developer with more than 6 months experience <br>expertise to create Frontend & Backend
+                Application </p>
+            <div class="home-sci">
+                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:8"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="#" style="--i:10"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
