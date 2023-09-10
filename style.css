@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
 
-body{
+body {
     color: #ededed;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,19 +22,19 @@ body{
     z-index: 100;
 }
 
-.logo{
+.logo {
     position: relative;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     cursor: default;
-    opacity: 1;
-    animation-name: slideRight;
-    animation-duration: 1s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 25px;
     color: #fff;
@@ -42,16 +42,17 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .35;
-    opacity: 1;
-    animation-name: slideTop;
-    animation-duration : 1s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-duration: 1s;
+    animation-delay: calc(.2s * var(--i));
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #0ef;
 }
 
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: space-between;
@@ -64,43 +65,46 @@ body{
     padding: 70px 10% 0;
 }
 
-.home-content{
+.home-content {
     max-width: 600px;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
-    opacity: 1;
-    animation-name: slideBottom;
-    animation-duration: .7s;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 
-.home-content h3 span{
+.home-content h3 span {
     color: #0ef;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
 }
 
-.home-content h1{
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: 3px 0;
-    opacity: 1;
-    animation-name: slideRight;
-    animation-duration: 1s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 
-.home-content p{
+.home-content p {
     font-size: 20px;
-    opacity: 1;
-    animation-name: slideLeft   ;
-    animation-duration: 1s;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 
-.home-sci a{
+.home-sci a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -113,20 +117,18 @@ body{
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 30px 0;
-    transition: .5s ease;
-    opacity: 1;
-    animation-name: slideLeft;
-    animation-duration: .7s;
-    animation-delay: calc(1s * var(--i));
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
-.home-sci a:hover{
+.home-sci a:hover {
     background: #0ef;
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
 }
 
-.btn-box{
+.btn-box {
     display: inline-block;
     padding: 12px 20px;
     background: #0ef;
@@ -136,54 +138,63 @@ body{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
 }
 
-.btn-box:hover{
+.btn-box:hover {
     box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef, 0 0 50px #0ef,
-    0 0 100px #0ef, 0 0 200px #0ef;
+        0 0 25px #0ef, 0 0 50px #0ef,
+        0 0 100px #0ef, 0 0 200px #0ef;
     /* Blur Radiuses of different size provided with color  */
 }
 
-@keyframes slideRight{
-    0%{
+@keyframes slideRight {
+    0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideLeft{
-    0%{
+@keyframes slideLeft {
+    0% {
         transform: translateX(100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideTop{
-    0%{
+@keyframes slideTop {
+    0% {
         transform: translateY(100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideBottom{
-    0%{
+@keyframes slideBottom {
+    0% {
         transform: translateY(-100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
